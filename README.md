@@ -1,6 +1,6 @@
 # Queryroom
 
-[Open the live app](https://adityamalviya04692.github.io/sql-interview-practice-console/)
+[Open the live app](https://adityamalviya04692.github.io/Project-QueryRoom/)
 
 Queryroom is an edtech portfolio project by Aditya Malviya that turns SQL study material into hands-on learning. It offers 332 interview practice questions, executable SQLite queries, answer verification, progressive hints, explanations, a playground, and a schema and data browser.
 
