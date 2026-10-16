@@ -1,0 +1,49 @@
+id,name,department_id,manager_id,job_title,gender,salary,hire_date,join_date,city
+1,Rajesh Kumar,,,Chief Executive Officer,M,450000.0,2015-01-05,2015-01-05,Bengaluru
+2,Krishna Sharma,1,1,Engineering Head,F,210000.0,2017-04-05,2017-04-05,Mumbai
+3,Divya Gupta,2,1,Sales Head,M,204000.0,2016-01-03,2016-01-03,Pune
+4,Kavya Bansal,3,1,Marketing Head,F,204000.0,2017-12-21,2017-12-21,Kolkata
+5,Kavya Pillai,4,1,Finance Head,M,204000.0,2016-03-23,2016-03-23,Kolkata
+6,Karan Joshi,5,1,Human Resources Head,F,186000.0,2018-02-03,2018-02-03,Kolkata
+7,Reyansh Chatterjee,6,1,Customer Support Head,M,214000.0,2018-01-24,2018-01-24,Ahmedabad
+8,Vikram Gupta,1,2,Data Engineer,F,116000.0,2023-10-07,2023-10-07,Mumbai
+9,Aditya Mehta,1,2,Software Engineer,F,143000.0,2019-07-09,2019-07-09,Ahmedabad
+10,Sanjay Reddy,1,2,QA Engineer,F,69000.0,2022-12-22,2022-12-22,Mumbai
+11,Anjali Reddy,1,2,Senior Software Engineer,M,98000.0,2022-11-23,2022-11-23,Pune
+12,Rahul Verma,1,2,Software Engineer,M,138000.0,2024-05-03,2024-05-03,Pune
+13,Nisha Kulkarni,1,2,Data Engineer,M,102000.0,2025-03-09,2025-03-09,Delhi
+14,Shreya Chopra,2,3,Regional Sales Head,F,148000.0,2024-06-08,2024-06-08,Delhi
+15,Sneha Agarwal,2,3,Sales Executive,M,144000.0,2020-11-06,2020-11-06,Kolkata
+16,Anjali Gupta,2,3,Regional Sales Head,F,114000.0,2025-09-09,2025-09-09,Bengaluru
+17,Krishna Chopra,2,3,Account Manager,F,58000.0,2024-03-15,2024-03-15,Bengaluru
+18,Priya Bansal,2,3,Sales Executive,M,145000.0,2022-11-17,2022-11-17,Pune
+19,Rohan Chatterjee,2,3,Sales Executive,M,114000.0,2025-01-04,2025-01-04,Chennai
+20,Anika Mehta,2,3,Sales Manager,M,146000.0,2019-02-24,2019-02-24,Ahmedabad
+21,Divya Nair,3,4,SEO Specialist,M,154000.0,2020-05-17,2020-05-17,Kolkata
+22,Aadhya Chopra,3,4,Content Strategist,M,91000.0,2023-08-17,2023-08-17,Ahmedabad
+23,Krishna Mehta,3,4,Marketing Analyst,M,84000.0,2021-10-08,2021-10-08,Bengaluru
+24,Arjun Verma,3,4,Marketing Analyst,M,149000.0,2023-02-17,2023-02-17,Pune
+25,Riya Agarwal,3,4,Marketing Manager,M,128000.0,2025-04-26,2025-04-26,Ahmedabad
+26,Suresh Rao,3,4,Marketing Analyst,M,121000.0,2023-07-14,2023-07-14,Ahmedabad
+27,Reyansh Verma,4,5,Finance Manager,F,137000.0,2019-04-07,2019-04-07,Pune
+28,Divya Pillai,4,5,Auditor,M,66000.0,2025-04-28,2025-04-28,Mumbai
+29,Manoj Chopra,4,5,Financial Analyst,M,120000.0,2018-02-25,2018-02-25,Pune
+30,Ananya Menon,4,5,Auditor,F,70000.0,2024-01-06,2024-01-06,Kolkata
+31,Aarav Bose,4,5,Auditor,F,78000.0,2025-03-07,2025-03-07,Hyderabad
+32,Aadhya Verma,4,5,Finance Manager,M,52000.0,2025-09-28,2025-09-28,Delhi
+33,Sneha Gupta,5,6,HR Executive,M,113000.0,2021-07-04,2021-07-04,Pune
+34,Swati Desai,5,6,HR Executive,M,93000.0,2023-05-07,2023-05-07,Chennai
+35,Meera Joshi,5,6,HR Manager,F,122000.0,2022-08-11,2022-08-11,Mumbai
+36,Aarav Pillai,5,6,HR Executive,M,107000.0,2022-03-12,2022-03-12,Mumbai
+37,Meera Chatterjee,5,6,HR Manager,F,95000.0,2022-10-26,2022-10-26,Bengaluru
+38,Shreya Kapoor,5,6,HR Manager,M,75000.0,2019-12-18,2019-12-18,Delhi
+39,Saanvi Desai,6,7,Customer Success Manager,M,84000.0,2022-09-16,2022-09-16,Hyderabad
+40,Vihaan Gupta,6,7,Support Team Lead,F,50000.0,2023-03-21,2023-03-21,Hyderabad
+41,Ananya Pillai,6,7,Customer Success Manager,F,46000.0,2019-12-05,2019-12-05,Bengaluru
+42,Sanjay Malhotra,6,7,Support Team Lead,M,60000.0,2022-06-26,2022-06-26,Bengaluru
+43,Amit Rao,6,7,Customer Success Manager,M,57000.0,2024-10-24,2024-10-24,Delhi
+44,Meera Reddy,6,7,Support Team Lead,M,48000.0,2023-07-26,2023-07-26,Pune
+45,Riya Reddy,6,7,Support Team Lead,M,145000.0,2025-04-07,2025-04-07,Ahmedabad
+46,Amit Kapoor,6,7,Support Executive,M,48000.0,2021-07-11,2021-07-11,Hyderabad
+47,Farhan Sheikh,,1,Intern,M,25000.0,2025-06-01,2025-06-01,Pune
+48,Ritu Sharma,,1,Intern,F,25000.0,2025-07-01,2025-07-01,Mumbai

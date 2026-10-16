@@ -1,0 +1,15 @@
+job_id,department_id,title,status
+1,1,DevOps Engineer,Closed
+2,2,Account Manager,Closed
+3,2,Account Manager,Open
+4,2,Regional Sales Head,Open
+5,3,Marketing Manager,Closed
+6,3,Content Strategist,Open
+7,3,Marketing Analyst,Open
+8,4,Finance Manager,Open
+9,4,Auditor,Closed
+10,5,HR Manager,Closed
+11,5,HR Business Partner,Open
+12,5,HR Business Partner,Open
+13,6,Customer Success Manager,Open
+14,6,Support Team Lead,Closed

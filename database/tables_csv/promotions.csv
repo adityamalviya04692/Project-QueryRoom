@@ -1,0 +1,29 @@
+id,employee_id,old_title,new_title,promotion_date
+1,6,Associate,Human Resources Head,2019-10-01
+2,6,Associate,Human Resources Head,2021-10-22
+3,10,Associate,QA Engineer,2019-12-25
+4,11,Associate,Senior Software Engineer,2025-10-26
+5,12,Associate,Software Engineer,2024-06-03
+6,12,Associate,Software Engineer,2023-11-11
+7,13,Associate,Data Engineer,2025-08-04
+8,13,Associate,Data Engineer,2022-06-21
+9,16,Associate,Regional Sales Head,2024-09-21
+10,17,Associate,Account Manager,2022-07-27
+11,17,Associate,Account Manager,2024-10-09
+12,18,Associate,Sales Executive,2025-02-09
+13,20,Associate,Sales Manager,2023-10-22
+14,20,Associate,Sales Manager,2022-06-01
+15,22,Associate,Content Strategist,2020-06-26
+16,22,Associate,Content Strategist,2021-06-09
+17,25,Associate,Marketing Manager,2023-04-03
+18,26,Associate,Marketing Analyst,2022-09-25
+19,26,Associate,Marketing Analyst,2020-12-16
+20,30,Associate,Auditor,2022-12-08
+21,31,Associate,Auditor,2022-09-17
+22,31,Associate,Auditor,2021-07-24
+23,35,Associate,HR Manager,2019-12-07
+24,36,Associate,HR Executive,2020-04-24
+25,41,Associate,Customer Success Manager,2025-04-10
+26,42,Associate,Support Team Lead,2021-01-23
+27,44,Associate,Support Team Lead,2023-05-23
+28,48,Associate,Intern,2023-05-16

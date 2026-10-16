@@ -1,0 +1,38 @@
+product_id,product_name,category,category_id,price,launch_date,discontinued,id
+1,Wireless Earbuds,Electronics,1,4731.75,2023-04-11,0,1
+2,Smartphone X12,Electronics,1,28139.38,2024-01-16,0,2
+3,4K Television,Electronics,1,15578.71,2025-02-27,0,3
+4,Bluetooth Speaker,Electronics,1,40953.5,2025-04-16,0,4
+5,Smartwatch Pro,Electronics,1,19611.54,2025-06-03,0,5
+6,Laptop Air 14,Electronics,1,43728.83,2023-08-13,0,6
+7,Cotton Kurta,Fashion,2,3958.63,2021-03-05,1,7
+8,Denim Jacket,Fashion,2,26647.93,2023-11-05,0,8
+9,Running Shoes,Fashion,2,26874.78,2023-11-12,0,9
+10,Silk Saree,Fashion,2,24740.61,2020-01-26,0,10
+11,Leather Wallet,Fashion,2,29287.91,2024-12-05,0,11
+12,Sunglasses,Fashion,2,39247.67,2021-01-09,0,12
+13,Non-stick Pan Set,Home & Kitchen,3,22627.11,2024-06-09,0,13
+14,Mixer Grinder,Home & Kitchen,3,37563.65,2020-12-12,0,14
+15,LED Lamp,Home & Kitchen,3,29862.0,2024-07-27,0,15
+16,Pressure Cooker,Home & Kitchen,3,22648.96,2024-03-17,0,16
+17,Water Purifier,Home & Kitchen,3,39295.33,2021-10-01,0,17
+18,The Alchemist,Books,4,6868.64,2021-08-20,0,18
+19,Sapiens,Books,4,25107.93,2022-11-17,0,19
+20,Atomic Habits,Books,4,21789.54,2020-09-02,0,20
+21,Rich Dad Poor Dad,Books,4,12569.73,2020-09-15,0,21
+22,Wings of Fire,Books,4,34235.69,2020-08-11,0,22
+23,Basmati Rice 5kg,Groceries,5,22824.06,2024-04-23,0,23
+24,Toor Dal 1kg,Groceries,5,22940.8,2023-09-08,0,24
+25,Cold Pressed Oil,Groceries,5,39462.62,2022-09-07,0,25
+26,Green Tea Pack,Groceries,5,6300.48,2020-07-15,0,26
+27,Masala Box,Groceries,5,30251.32,2023-02-07,0,27
+28,Cricket Bat,Sports,6,35309.53,2021-12-21,0,28
+29,Yoga Mat,Sports,6,6562.61,2021-08-08,0,29
+30,Badminton Racket,Sports,6,4371.53,2023-03-22,0,30
+31,Football,Sports,6,7391.75,2023-09-13,0,31
+32,Dumbbell Set,Sports,6,8929.15,2022-02-24,0,32
+33,Face Wash,Beauty,7,15308.39,2023-08-23,1,33
+34,Herbal Shampoo,Beauty,7,15017.68,2024-05-17,0,34
+35,Lip Balm Kit,Beauty,7,5211.32,2021-02-03,0,35
+36,Sunscreen SPF50,Beauty,7,1925.53,2021-05-25,0,36
+37,Perfume 100ml,Beauty,7,19088.1,2025-05-13,0,37

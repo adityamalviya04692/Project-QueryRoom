@@ -1,0 +1,7 @@
+booking_id,room_id,guest_name,start_date,end_date
+1,101,Rohan Mehta,2026-08-01,2026-08-05
+2,101,Kavya Nair,2026-08-04,2026-08-08
+3,102,Aditya Rao,2026-08-02,2026-08-03
+4,103,Neha Gupta,2026-08-10,2026-08-15
+5,102,Sanjay Iyer,2026-08-03,2026-08-06
+6,104,Priya Sharma,2026-08-01,2026-08-02
