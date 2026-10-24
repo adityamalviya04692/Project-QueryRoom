@@ -1,10 +1,6 @@
 /* Queryroom presentation layer. Original SQLite execution and learning state are retained. */
 const qrLanding = `<div class="qr-landing">
-<section class="qr-hero"><div><div class="qr-kicker">A little practice. A lot of possibility.</div><h2>Your next chapter<br>starts with <em>SELECT.</em></h2><p>Make SQL something you can do, not just something you have read. Work through real queries, get useful feedback, and build the confidence to solve the next problem yourself.</p><div class="qr-actions"><button class="qr-primary" data-qr="practice">Start practising ↗</button><button class="qr-secondary" data-qr="playground">Open playground</button></div><p class="qr-note">Free to explore · No account or database setup · Progress saved locally</p></div><div class="qr-demo" aria-label="Example SQL query and its result"><div class="qr-demo-header">● ● ● &nbsp; your_first_query.sql <span style="float:right">SQLite</span></div><pre><b>SELECT</b> department_id,
-       <b>ROUND(AVG</b>(salary), 0<b>)</b> <b>AS</b> avg_salary
-<b>FROM</b> employees
-<b>GROUP BY</b> department_id
-<b>ORDER BY</b> avg_salary <b>DESC</b>;</pre><div class="qr-demo-result">WRITE → RUN → UNDERSTAND<br><strong>One query. A new way to think.</strong><br>Explore the data. Make it make sense.</div></div></section>
+<section class="qr-hero"><div><div class="qr-kicker">A little practice. A lot of possibility.</div><h2>Your next chapter<br>starts with <em>SELECT.</em></h2><p>Make SQL something you can do, not just something you have read. Work through real queries, get useful feedback, and build the confidence to solve the next problem yourself.</p><div class="qr-actions"><button class="qr-primary" data-qr="practice">Start practising ↗</button><button class="qr-secondary" data-qr="playground">Open playground</button></div><p class="qr-note">Free to explore · No account or database setup · Progress saved locally</p></div><div class="qr-demo" aria-label="Example SQL query and its result"><div class="qr-demo-header">● ● ● &nbsp; your_first_query.sql <span style="float:right">SQLite</span></div><pre class="qr-typed" data-qr-demo aria-hidden="true"></pre><div class="qr-runbar"><span class="qr-run">▶ Run</span><span class="qr-runinfo"></span></div><div class="qr-res" aria-hidden="true"></div><span class="qr-sr">SELECT department_id, ROUND(AVG(salary), 0) AS avg_salary FROM employees GROUP BY department_id ORDER BY avg_salary DESC returns seven rows, led by employees with no department.</span></div></div></section>
 <div class="qr-stats"><div><strong>332</strong><span>Interview practice questions</span></div><div><strong>37</strong><span>Tables to explore</span></div><div><strong>24</strong><span>Book chapters to study alongside</span></div></div>
 <div class="qr-section-title"><h3>Built for the way you learn.</h3><span>LESS GUESSING. MORE UNDERSTANDING.</span></div><section class="qr-features">
 <article class="qr-feature"><div class="feature-icon">01</div><h4>Practice with purpose</h4><p>Filter by topic and difficulty. Work through joins, aggregations, window functions, subqueries, and recursive CTEs using industry-style interview patterns.</p></article>
@@ -15,7 +11,32 @@ const qrLanding = `<div class="qr-landing">
 <article class="qr-feature"><div class="feature-icon">↗</div><h4>Pick up where you left off</h4><p>Your solved questions, stars, and playground query stay in this browser. Download the standalone edition to keep practising offline.</p></article></section>
 <section class="qr-story"><div><span class="qr-kicker">FROM THE BOOK TO THE KEYBOARD</span><h3>A companion for your SQL bookshelf.</h3><p>The Book Practice section includes exercises and example tables drawn from <em>Sams Teach Yourself SQL in 24 Hours</em>, organised by Hour. It pairs chapter-based study with runnable exercises, hints, and answer checks. The separate interview bank adds 332 questions around common industry SQL patterns.</p><button class="qr-secondary" data-qr="book">Explore book practice →</button></div><div><span class="qr-kicker">AN EDTECH PROJECT BY ADITYA MALVIYA</span><h3>Turning study material into active learning.</h3><p>I built Queryroom to showcase my skills in the edtech space: designing a tool that helps students study SQL through questions, experimentation, and clear feedback. The aim is to make the journey from understanding a concept to using it feel approachable.</p><div class="qr-actions"><a href="https://github.com/adityamalviya04692/Project-QueryRoom">Explore the project ↗</a></div></div></section>
 <div class="qr-credit">Book exercises are attributed to <em>Sams Teach Yourself SQL in 24 Hours</em>. Queryroom is an independent learning project and is not affiliated with the book's publisher. Interview questions are practice material, not a claim of company endorsement.<br><a href="Queryroom_Offline.html" download>Download the standalone offline console</a> · Built by Aditya Malviya</div></div>`;
-function qrHome(){currentQ=null;renderList();document.getElementById('content').innerHTML=qrLanding;document.getElementById('topbar-title').textContent='Queryroom / Welcome to your SQL practice studio';qrActive('home');qrCloseMobile();}
+
+/* Landing demo: the hero query types itself, runs, and its real result streams in (rows from the
+   practice database). One loop; it stops when the landing page is replaced and under reduced motion
+   shows the finished card. */
+const QR_SQL=[['SELECT','k'],[' department_id,\n       ',''],['ROUND','k'],['(',''],['AVG','k'],['(salary), 0) ',''],['AS','k'],[' avg_salary\n',''],['FROM','k'],[' employees\n',''],['GROUP BY','k'],[' department_id\n',''],['ORDER BY','k'],[' avg_salary ',''],['DESC','k'],[';','']];
+const QR_ROWS=[[null,166667],[2,134125],[3,133000],[1,125143],[5,113000],[4,103857],[6,83556]];
+function qrDemo(){
+  const pre=document.querySelector('[data-qr-demo]');if(!pre)return;
+  const card=pre.closest('.qr-demo'),res=card.querySelector('.qr-res'),run=card.querySelector('.qr-run'),info=card.querySelector('.qr-runinfo');
+  const esc=t=>t.replace(/&/g,'&amp;').replace(/</g,'&lt;');
+  const total=QR_SQL.reduce((n,[t])=>n+t.length,0);
+  const paint=n=>{let left=n,html='';for(const[t,k]of QR_SQL){const part=t.slice(0,Math.max(0,left));left-=t.length;if(part)html+=k?`<b>${esc(part)}</b>`:esc(part);}pre.innerHTML=html+(n<total?'<i class="qr-caret"></i>':'');};
+  const table=k=>{res.innerHTML='<div class="qr-res-head"><span>department_id</span><span>avg_salary</span></div>'+QR_ROWS.slice(0,k).map(([d,v],i)=>`<div class="qr-res-row${d===null?' null':''}" style="animation-delay:${i*0.07}s"><span>${d===null?'NULL':d}${d===null?'<em>no department</em>':''}</span><span>${v.toLocaleString('en-IN')}</span></div>`).join('');};
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches){paint(total);table(QR_ROWS.length);info.innerHTML='<b>✓</b> 7 rows returned';return;}
+  let n=0,timer=0;
+  const alive=()=>pre.isConnected;
+  const step=()=>{if(!alive())return;
+    if(n===0){res.innerHTML='';info.textContent='';run.classList.remove('press');card.classList.remove('done');}
+    if(n<=total){paint(n);n+=document.hidden?0:2;timer=setTimeout(step,32);return;}
+    run.classList.add('press');info.textContent='running…';
+    timer=setTimeout(()=>{if(!alive())return;run.classList.remove('press');table(QR_ROWS.length);info.innerHTML='<b>✓</b> 7 rows returned';card.classList.add('done');
+      timer=setTimeout(()=>{if(!alive())return;card.classList.add('reset');timer=setTimeout(()=>{if(!alive())return;card.classList.remove('reset');n=0;step();},450);},5200);},420);
+  };
+  clearTimeout(qrDemo.t);step();qrDemo.t=timer;
+}
+function qrHome(){currentQ=null;renderList();document.getElementById('content').innerHTML=qrLanding;qrDemo();document.getElementById('topbar-title').textContent='Queryroom / Welcome to your SQL practice studio';qrActive('home');qrCloseMobile();}
 function qrActive(page){document.querySelectorAll('.qr-nav button').forEach(b=>{b.classList.toggle('active',b.dataset.qr===page);b.setAttribute('aria-current',b.dataset.qr===page?'page':'false');});}
 function qrCloseMobile(){if(matchMedia('(max-width:720px)').matches)document.getElementById('sidebar').classList.add('collapsed');}
 function qrNavigate(page){if(!db&&page!=='home'){document.getElementById('topbar-title').textContent='Preparing the SQL database. Please try again in a moment.';return;}if(page==='home')qrHome();if(page==='practice'){openQuestion(QUESTIONS[0]);qrActive(page);}if(page==='playground'||page==='book'){openPlayground();qrActive(page);if(page==='book'){const b=document.getElementById('book-body');b.classList.remove('collapsed');document.getElementById('book-header').scrollIntoView({block:'start'});}}if(page==='database'){openSchemaBrowser();qrActive(page);}qrCloseMobile();}
